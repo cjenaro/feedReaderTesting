@@ -58,9 +58,9 @@ $(function() {
 
           it('should toggle when clicked', function() {
             menuIcon.click();
-            expect(body.attr('class')).not.toEqual('menu-hidden');
+            expect(classList).not.toContain('menu-hidden');
             menuIcon.click();
-            expect(body.attr('class')).toEqual('menu-hidden');
+            expect(classList).toContain('menu-hidden');
           })
 
     });
@@ -89,7 +89,7 @@ $(function() {
           loadFeed(0, function() {
             done();
           });
-          firstCall = $('.entry-link');
+          firstCall = $('.entry-link').html();
         });
 
          it('should change content', function(done) {
