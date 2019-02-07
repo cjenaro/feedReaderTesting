@@ -67,6 +67,7 @@ $(function() {
 
     describe('Initial Entries', function() {
         let feed;
+        let feedLength;
 
         beforeEach(function(done) {
           feed = $('.feed .entry');
@@ -76,7 +77,8 @@ $(function() {
         });
 
          it('should have at least one entry', function(done) {
-           expect(feed.attr('length')).not.toBe(0);
+           feedLength = feed.length;
+           expect(feedLength).not.toBe(0);
            done();
          })
 
